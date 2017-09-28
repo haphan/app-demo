@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('PreBuild') {
       steps {
         echo 'Heyyyy foo bar'
         echo 'Another message'
