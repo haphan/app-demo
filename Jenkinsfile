@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'sf2-cli'
       args '-v ./:/workspace'
+      image 'sttc/sf-cli'
     }
     
   }
