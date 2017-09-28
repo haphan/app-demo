@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('Unit-Test') {
       steps {
-        echo 'Heyyyy foo bar'
-        echo 'Another message'
+        sh 'php --version'
+        sh 'vendor/bin/php-cs-fixer fix --dry-run --diff --verbose'
       }
     }
   }
