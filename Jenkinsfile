@@ -9,7 +9,9 @@ pipeline {
     stage('Initialize') {
       steps {
         sh 'php --version'
-        sh 'vendor/bin/php-cs-fixer fix --dry-run --diff --verbose'
+        sh 'pwd'
+        sh 'ls -lah'
+        sh 'composer --version'
       }
     }
   }
