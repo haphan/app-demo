@@ -1,10 +1,17 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'sttc/sf-cli'
+    }
+    
+  }
   stages {
-    stage('error') {
+    stage('Initialize') {
       steps {
-        echo 'Heyyyy foo bar'
-        echo 'Another message'
+        sh 'php --version'
+        sh 'pwd'
+        sh 'ls -lah'
+        sh 'composer --version'
       }
     }
   }
