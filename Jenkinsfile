@@ -2,7 +2,6 @@ pipeline {
   agent {
     docker {
       image 'sttc/sf-cli'
-      args '-v $(pwd):/workspace'
     }
     
   }
